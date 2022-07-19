@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Sound Library</title>
+  </head>
+  <body>
+    <div class="main-header box-shadow">
+      <div class="logo-box"><p>Sound Library</p></div>
+      <div class="menu-box">
+        <ul>
+          <li>Library</li>
+          <li>Effects</li>
+          <li>Premium</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="inner-header box-shadow"></div>
+      <div class="inner-content">
+        <div class="nav-box box-shadow">
+          <form id="library-form">
+            <div class="fields">
+              <div class="input-group">
+                <label for="author">Author</label>
+                <input
+                  type="text"
+                  name="author"
+                  class="input-field"
+                  placeholder="Author's name"
+                />
+              </div>
+              <div class="input-group">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  class="input-field"
+                  placeholder="Music title"
+                />
+              </div>
+              <div class="input-group">
+                <label for="status">Status</label>
+                <select name="status">
+                  <option value="edited">Edited</option>
+                  <option value="planned">Planned</option>
+                </select>
+              </div>
+            </div>
+            <input type="submit" class="btn-submit" value="Add to list" />
+          </form>
+        </div>
+        <div id="playlist" class="box-shadow">
+          <div class="table-head">
+            <div><p>Author</p></div>
+            <div><p>Title</p></div>
+            <div><p>Status</p></div>
+            <div><p></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-footer"></div>
+  </body>
+</html>

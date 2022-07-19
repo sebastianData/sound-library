@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+
+:root {
+  font-size: 14px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.main-header {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row;
+  padding: 0 5vw;
+}
+
+.main-header .logo-box {
+  font-weight: 700;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-header .logo-box p {
+  font-size: 1.4rem;
+}
+
+.main-header .menu-box {
+  font-weight: 400;
+  font-size: 1rem;
+  flex-basis: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-header .menu-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  gap: 5vw;
+}
+
+.main-header .menu-box ul li {
+  float: right;
+  color: #000;
+  margin-top: 0;
+  transition: color 0.3s linear, margin-top 0.3s linear;
+}
+
+.main-header .menu-box ul li:hover {
+  color: violet;
+  cursor: pointer;
+  margin-top: -3px;
+  transition: color 0.3s linear, margin-top 0.3s linear;
+}
+
+.main-container {
+  margin: 0 auto;
+  height: 100vh;
+  background-color: none;
+  margin-top: 15px;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  max-width: 1300px;
+  width: 90vw;
+}
+
+.main-container .inner-header {
+  width: 100%;
+  background-color: violet;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.main-container .inner-content {
+  display: flex;
+  gap: 15px;
+}
+
+.main-container .inner-content .nav-box {
+  flex-basis: 30%;
+  height: 50vh;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+#library-form {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+#library-form .fields {
+  flex-basis: 80%;
+  justify-content: space-between;
+  display: flex;
+  flex-flow: column;
+}
+
+#library-form .input-group {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+#library-form .input-group label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#library-form .input-group .input-field {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+#library-form .input-group select {
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+#library-form .input-group select option {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#library-form .btn-submit {
+  background-color: violet;
+  flex-basis: 10%;
+  padding: 10px;
+  margin-top: 30px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: filter 0.3s linear;
+}
+
+#library-form .btn-submit:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+  transition: filter 0.3s linear;
+}
+
+#playlist {
+  flex-basis: 70%;
+  padding: 10px 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column;
+}
+
+#playlist .item {
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1px solid #c8c8c8;
+  line-height: 30px;
+  padding: 10px 0;
+}
+
+#playlist .table-head {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1px solid #c8c8c8;
+}
+#playlist .table-head div,
+#playlist .item div {
+  flex-basis: 25%;
+}
+
+#playlist .item--delete {
+  background-color: transparent;
+  border: 1px solid violet;
+  text-align: center;
+  color: #000;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+#playlist .item--delete:hover {
+  cursor: pointer;
+  background-color: violet;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.box-shadow {
+  box-shadow: 0 0 10px #bbb;
+}
+
+.main-footer {
+  max-width: 1300px;
+  width: 90vw;
+}
+/* Doplniť styles na main header */
