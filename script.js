@@ -7,7 +7,6 @@ const defaultData = {
 const Library = function (playlistElement) {
   this.items = [];
   this.playlist = document.getElementById(playlistElement);
-
   this.items.push(defaultData);
   this.render();
 };
@@ -19,24 +18,32 @@ Library.prototype.add = function (item) {
   }
 };
 
-Library.prototype.remove = function (item) {};
+Library.prototype.remove = function (i) {
+  this.items.splice(i.dataset.id, 1);
+  this.render();
+};
 
 Library.prototype.render = function () {
-  this.clear();
+  let self = this;
+  self.clear();
 
-  this.items.forEach((i) => {
+  self.items.forEach((n, i) => {
     let item = document.createElement("div");
+    item.setAttribute("data-id", i);
     item.innerHTML =
       "<div>" +
-      i.author +
+      n.author +
       "</div><div>" +
-      i.title +
+      n.title +
       "</div><div>" +
-      i.status +
+      n.status +
       "</div><div class='item--delete'>delete</div>";
     item.className = "item";
 
-    this.playlist.appendChild(item);
+    self.playlist.appendChild(item);
+    item.querySelector(".item--delete").addEventListener("click", function () {
+      self.remove(item);
+    });
   });
 };
 
